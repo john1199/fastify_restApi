@@ -1,0 +1,2 @@
+npm i fastify mongoose
+npm i boom fastify-swagger
