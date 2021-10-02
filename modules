@@ -1,2 +1,2 @@
 npm i fastify mongoose
-npm i boom fastify-swagger
+npm i boom fastify-swagger nodemon

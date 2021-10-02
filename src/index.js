@@ -3,8 +3,14 @@ const fastify = require("fastify")({
   logger: true,
 });
 
+const productsRoutes = require("./routes/products.routes");
+require("./utils/database");
+
 fastify.get("/", (request, reply) => {
   reply.send({ msg: "hello world" });
+});
+productsRoutes.forEach((route) => {
+  fastify.route(route);
 });
 
 const start = async () => {
