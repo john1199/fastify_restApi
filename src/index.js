@@ -5,6 +5,9 @@ const fastify = require("fastify")({
 
 const productsRoutes = require("./routes/products.routes");
 require("./utils/database");
+const swagger = require("./utils/swagger");
+
+fastify.register(require("fastify-swagger"), swagger.options);
 
 fastify.get("/", (request, reply) => {
   reply.send({ msg: "hello world" });
